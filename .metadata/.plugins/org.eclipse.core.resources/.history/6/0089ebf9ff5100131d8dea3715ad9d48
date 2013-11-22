@@ -1,0 +1,23 @@
+package controllers;
+
+import java.text.Normalizer.Form;
+
+import models.Bar;
+
+import play.*;
+import play.mvc.*;
+
+import views.html.*;
+
+public class Application extends Controller {
+  
+    public static Result index() {
+        return ok(index.render("Tüdelüüüü"));
+    }
+    
+    public static Result addBar() {
+    	
+    	Bar bar = Form.form(Bar.class).bindFromRequest[].get;
+    }
+  
+}

@@ -3,13 +3,13 @@
 
 # --- !Ups
 
-create table bar (
+create table login (
   id                        varchar(255) not null,
   name                      varchar(255),
-  constraint pk_bar primary key (id))
+  constraint pk_login primary key (id))
 ;
 
-create sequence bar_seq;
+create sequence login_seq;
 
 
 
@@ -18,9 +18,9 @@ create sequence bar_seq;
 
 SET REFERENTIAL_INTEGRITY FALSE;
 
-drop table if exists bar;
+drop table if exists login;
 
 SET REFERENTIAL_INTEGRITY TRUE;
 
-drop sequence if exists bar_seq;
+drop sequence if exists login_seq;
 

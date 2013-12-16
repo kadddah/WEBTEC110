@@ -376,3 +376,26 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.core.jobs 4 2 2013-12-16 08:31:38.627
+!MESSAGE An internal error occurred during: "Resetting to HEAD".
+!STACK 0
+org.eclipse.jgit.api.errors.JGitInternalException: Exception caught during execution of reset command. {0}
+	at org.eclipse.jgit.api.ResetCommand.call(ResetCommand.java:233)
+	at org.eclipse.egit.core.op.ResetOperation.reset(ResetOperation.java:94)
+	at org.eclipse.egit.core.op.ResetOperation.access$0(ResetOperation.java:82)
+	at org.eclipse.egit.core.op.ResetOperation$1.run(ResetOperation.java:72)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2326)
+	at org.eclipse.egit.core.op.ResetOperation.execute(ResetOperation.java:76)
+	at org.eclipse.egit.core.internal.job.JobUtil$1.run(JobUtil.java:50)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: java.io.IOException: Could not delete file C:\Users\Katuschi\Desktop\WEBTEC13\.metadata\.plugins\org.eclipse.cdt.core\.log
+	at org.eclipse.jgit.util.FileUtils.delete(FileUtils.java:142)
+	at org.eclipse.jgit.util.FileUtils.delete(FileUtils.java:98)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkoutEntry(DirCacheCheckout.java:1132)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.doCheckout(DirCacheCheckout.java:457)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkout(DirCacheCheckout.java:391)
+	at org.eclipse.jgit.api.ResetCommand.checkoutIndex(ResetCommand.java:363)
+	at org.eclipse.jgit.api.ResetCommand.call(ResetCommand.java:206)
+	... 8 more

@@ -14,7 +14,7 @@ import views.html.*;
 
 public class Application extends Controller {
   
-    public static Result index() {
+   /* public static Result index() {
         return ok(index.render("Tüdelüüüü"));
     }
     
@@ -24,6 +24,14 @@ public class Application extends Controller {
     	bar.save();
     	return redirect(routes.Application.index());
     }
+    index scala: 
+     <!--  
+   <form action="@routes.Application.addBar()" method="post">
+   	<input name="name">
+   	<input type="submit">
+   </form>
+    -->
+    */
   
    /* public static Result getBars() {
     	

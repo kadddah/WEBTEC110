@@ -10,7 +10,7 @@ public class Login extends Controller{
 
 	public static Result showLogin(){
 		
-		return redirect("/assets/html/login.html");
+		return redirect("/assets/html/logged_in.html");
 	}
 	
 	public static Result login(){

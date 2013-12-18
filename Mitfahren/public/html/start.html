@@ -12,7 +12,8 @@
 
 <link rel="stylesheet" type="text/css" href="../stylesheets/styles.css" />
 <link rel="stylesheet" type="text/css" href="../stylesheets/main.css" />
-<link rel="stylesheet" type="text/css" href="../stylesheets/neue_strecken.css" />
+<link rel="stylesheet" type="text/css"
+	href="../stylesheets/neue_strecken.css" />
 
 <link rel="stylesheet" type="text/css"
 	href="../stylesheets/bootstrap/css/bootstrap.min.css" />
@@ -104,45 +105,45 @@
 		}
 	</script>
 	<script type="text/javascript">
-			$(function() {
-				var _scroll = {
-					delay: 1000,
-					easing: 'linear',
-					items: 1,
-					duration: 0.07,
-					timeoutDuration: 0,
-					pauseOnHover: 'immediate'
-				};
-				$('#ticker-1').carouFredSel({
-					width: 1000,
-					align: false,
-					items: {
-						width: 'variable',
-						height: 35,
-						visible: 1
-					},
-					scroll: _scroll
-				});
-
-				$('#ticker-2').carouFredSel({
-					width: 1000,
-					align: false,
-					circular: false,
-					items: {
-						width: 'variable',
-						height: 35,
-						visible: 2
-					},
-					scroll: _scroll
-				});
-
-				//	set carousels to be 100% wide
-				$('.caroufredsel_wrapper').css('width', '100%');
-
-				//	set a large width on the last DD so the ticker won't show the first item at the end
-				$('#ticker-2 dd:last').width(2000);
+		$(function() {
+			var _scroll = {
+				delay : 1000,
+				easing : 'linear',
+				items : 1,
+				duration : 0.07,
+				timeoutDuration : 0,
+				pauseOnHover : 'immediate'
+			};
+			$('#ticker-1').carouFredSel({
+				width : 1000,
+				align : false,
+				items : {
+					width : 'variable',
+					height : 35,
+					visible : 1
+				},
+				scroll : _scroll
 			});
-		</script>
+
+			$('#ticker-2').carouFredSel({
+				width : 1000,
+				align : false,
+				circular : false,
+				items : {
+					width : 'variable',
+					height : 35,
+					visible : 2
+				},
+				scroll : _scroll
+			});
+
+			//	set carousels to be 100% wide
+			$('.caroufredsel_wrapper').css('width', '100%');
+
+			//	set a large width on the last DD so the ticker won't show the first item at the end
+			$('#ticker-2 dd:last').width(2000);
+		});
+	</script>
 
 	<div class="lock-header hidden-phone">
 		<div class="container">
@@ -184,21 +185,29 @@
 
 							<div class="center">
 								<p>Bitte hier die gewünschte Strecke eintragen!</p>
-								<form action="" id="sendSearch" method="post">
 
+
+								<form action="http://maps.google.com/maps" method="get"
+									target="_blank">
 									<div class="table-responsive">
+
 										<table class="table">
 											<tr>
-												<td class="white">Start</td>
-												<td><input type="text" class="inputLeft" name="from"></td>
+												<td class="white">Start (mit Ort)</td>
+												<td><input class="inputbox inputleft" type="text"
+													name="saddr" value="" /></td>
 											</tr>
 											<tr>
-												<td class="white">Ziel</td>
-												<td><input type="text" class="inputLeft" name="to"></td>
+												<td class="white">Ziel (mit Ort)</td>
+												<td><input class="inputbox inputleft" type="text"
+													name="daddr" value="" /></td>
 											</tr>
 										</table>
+										<button type="submit" class="btn btn-small">Karte
+											aufrufen</button>
+
+
 									</div>
-									<input type="submit" class="btn btn-small" />
 								</form>
 							</div>
 						</div>
@@ -208,45 +217,60 @@
 							<h1>Webtechnik 13/14</h1>
 							<h2>Mitfahrgelegenheit</h2>
 
-							
+
 
 							<div class="center">
 								<p>Bitte hier die gewünschte Strecke eintragen!</p>
-								<form action="" id="sendSearch" method="post">
 
+
+								<form action="http://maps.google.com/maps" method="get"
+									target="_blank">
 									<div class="table-responsive">
+
 										<table class="table">
 											<tr>
-												<td class="white">Start</td>
-												<td><input type="text" class="inputLeft" name="from"></td>
+												<td class="white">Start (mit Ort)</td>
+												<td><input class="inputbox inputleft" type="text"
+													name="saddr" value="" /></td>
 											</tr>
 											<tr>
-												<td class="white">Ziel</td>
-												<td><input type="text" class="inputLeft" name="to"></td>
+												<td class="white">Ziel (mit Ort)</td>
+												<td><input class="inputbox inputleft" type="text"
+													name="daddr" value="" /></td>
 											</tr>
 										</table>
+										<button type="submit" class="btn btn-small">Karte
+											aufrufen</button>
+
+
 									</div>
-									<input type="submit" class="btn btn-small" />
 								</form>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		<div id="wrapper">
-			<div class="first">
-				<dl id="ticker-1">
-					<dt>News ticker</dt>
-						<dd>A news ticker (sometimes referred to as a &quot;crawler&quot;) resides in the lower third of the television screen space on television news networks dedicated to presenting headlines or minor pieces of news.</dd>
-	
-					<dt>Scoreboard style</dt>
-						<dd>It may also refer to a long, thin scoreboard-style display seen around the front of some offices or public buildings.</dd>
-	
-					<dt>WWW</dt>
-						<dd>Since the growth in usage of the World Wide Web, news tickers have largely syndicated news posts from the websites of the broadcasting services which produce the broadcasts.</dd>
-				</dl>
+			<div id="wrapper">
+				<div class="first">
+					<dl id="ticker-1">
+						<dt>News ticker</dt>
+						<dd>A news ticker (sometimes referred to as a
+							&quot;crawler&quot;) resides in the lower third of the television
+							screen space on television news networks dedicated to presenting
+							headlines or minor pieces of news.</dd>
+
+						<dt>Scoreboard style</dt>
+						<dd>It may also refer to a long, thin scoreboard-style
+							display seen around the front of some offices or public
+							buildings.</dd>
+
+						<dt>WWW</dt>
+						<dd>Since the growth in usage of the World Wide Web, news
+							tickers have largely syndicated news posts from the websites of
+							the broadcasting services which produce the broadcasts.</dd>
+					</dl>
+				</div>
 			</div>
-		</div>
 		</div>
 
 		<a href="#feature-set" class="down-tab hidden-phone"
@@ -266,7 +290,7 @@
 				</div>
 
 				<div class="center_wob">
-					<form action="" id="sendLogin" method="post">
+					<form method="post" action="logged_in.html" id="sendLogin">
 
 						<div class="table-responsive">
 							<table class="table">
@@ -302,7 +326,7 @@
 				</div>
 
 				<div class="">
-					<form action="" id="sendRegis" method="post">
+					<form action="logged_in.html" id="sendRegis" method="post">
 						<div class="table-responsive">
 							<table class="table">
 								<tr>

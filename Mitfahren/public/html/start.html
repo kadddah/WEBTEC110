@@ -145,6 +145,7 @@
 		});
 	</script>
 
+
 	<div class="lock-header hidden-phone">
 		<div class="container">
 			<div class="row">
@@ -187,20 +188,17 @@
 								<p>Bitte hier die gewünschte Strecke eintragen!</p>
 
 
-								<form action="http://maps.google.com/maps" method="get"
-									target="_blank">
+								<form action="map.html" action="map.html" method="GET">
 									<div class="table-responsive">
 
 										<table class="table">
 											<tr>
 												<td class="white">Start (mit Ort)</td>
-												<td><input class="inputbox inputleft" type="text"
-													name="saddr" value="" /></td>
+												<td><input type="text" name="start" id="start" class="inputbox inputleft" /></td>
 											</tr>
 											<tr>
 												<td class="white">Ziel (mit Ort)</td>
-												<td><input class="inputbox inputleft" type="text"
-													name="daddr" value="" /></td>
+												<td><input type="text" name="end" id="end" class="inputbox inputleft"  onchange="calcRoute();" /></td>
 											</tr>
 										</table>
 										<button type="submit" class="btn btn-small">Karte
@@ -223,20 +221,17 @@
 								<p>Bitte hier die gewünschte Strecke eintragen!</p>
 
 
-								<form action="http://maps.google.com/maps" method="get"
-									target="_blank">
+								<form action="map.html" method="get">
 									<div class="table-responsive">
 
 										<table class="table">
 											<tr>
 												<td class="white">Start (mit Ort)</td>
-												<td><input class="inputbox inputleft" type="text"
-													name="saddr" value="" /></td>
+												<td><input type="text" id="start" class="inputbox inputleft" /></td>
 											</tr>
 											<tr>
 												<td class="white">Ziel (mit Ort)</td>
-												<td><input class="inputbox inputleft" type="text"
-													name="daddr" value="" /></td>
+												<td><input type="text" id="end" class="inputbox inputleft"  onchange="calcRoute();" /></td>
 											</tr>
 										</table>
 										<button type="submit" class="btn btn-small">Karte

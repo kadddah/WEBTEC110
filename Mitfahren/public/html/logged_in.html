@@ -1,0 +1,195 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+<meta name="viewport"
+	content="width=device-width, initial-scale = 1.0; maximum-scale=1.0, user-scalable=no" />
+<META NAME="Description" CONTENT="Mitfahrgelegenheiten am Bodensee">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+<title>WEBTEC</title>
+
+<link rel="stylesheet" type="text/css" href="../stylesheets/styles.css" />
+<link rel="stylesheet" type="text/css" href="../stylesheets/main.css" />
+<link rel="stylesheet" type="text/css"
+	href="../stylesheets/neue_strecken.css" />
+
+<link rel="stylesheet" type="text/css"
+	href="../stylesheets/bootstrap/css/bootstrap.min.css" />
+<link
+	href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,700,900'
+	rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Merienda'
+	rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css"
+	href="../stylesheets/bootstrap/css/style703a.css?230984" />
+
+<link href="../stylesheets/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+<link rel="shortcut icon" type="image/x-icon"
+	href="../images/rabbit.ico?1234">
+
+<script src="../javascripts/jquery-1.8.2.min.js"></script>
+<script src="../javascripts/jquery.easing.1.3.js"></script>
+<script src="../javascripts/waypoints.min.js"></script>
+<script src="../javascripts/jquery.parallax-1.1.3.js"></script>
+<script src="../javascripts/webtec.js"></script>
+<script src="../javascripts/jquery.carouFredSel-6.0.4-packed.js"></script>
+
+</head>
+<body name="top">
+	<div class="lock-header hidden-phone">
+		<div class="container">
+			<div class="row">
+				<!--  <div class="span4 offset2">
+					<h4>Wo möchten Sie hin?</h4>
+				</div> -->
+				<div class="linkNav">
+					<!-- #login -->
+					&#9830; <a href="#top">Nach Oben!</a> &#9830; <a
+						href="#feature-set">Einloggen</a> &#9830; <a href="#regis">Registrieren</a>
+					&#9830;
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="page-wrapper">
+		<div class="agency-wrap">
+			<div class="container page-container home-container">
+				<div class="row">
+					<div class="span12">
+						<div class="top-nav">
+							<a href="#top" class="logo-link"> <img
+								src="../images/logo.png" alt="webtec">
+							</a>
+							<ul class="nav nav-home">
+								<!-- #login -->
+								<li><a href="#feature-set" class="">Einloggen</a></li>
+								<li><a href="#regis" class="">Registrieren</a></li>
+
+							</ul>
+						</div>
+						
+
+						
+					</div>
+				</div>
+			</div>
+			
+		</div>
+
+
+		<!-- ########################### SEITE 2 ########################### -->
+		<div class="full-width-features feature-1">
+			<div class="container" name="login">
+				<div class="row">
+					<div class="span12">
+						<h1>Login</h1>
+						<h2>Einloggen mit E-Mail und Passwort.</h2>
+					</div>
+				</div>
+
+				<div class="center_wob">
+					<form action="@routes.Application.showLogin()" id="sendLogin" method="post">
+
+						<div class="table-responsive">
+							<table class="table">
+								<tr>
+									<td>E-Mail*</td>
+									<td><input type="text" class="inputLeft" name="loginMail"></td>
+								</tr>
+								<tr>
+									<td>Passwort*</td>
+									<td><input type="text" class="inputLeft"
+										name="loginPassword"></td>
+								</tr>
+							</table>
+						</div>
+						<div class="facebook">
+							<fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
+						</div>
+						<input type="submit" class="btn btn-small" value="Einloggen" />
+					</form>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- ########################### SEITE 3 ########################### -->
+		<div class="full-width-features feature-2">
+			<div class="container" name="regis">
+				<div class="row">
+					<div class="span12">
+						<h1>Registrieren</h1>
+						<h2>Tragen Sie Ihre Daten zur Registration ein.</h2>
+					</div>
+				</div>
+
+				<div class="">
+					<form action="logged_in.html" id="sendRegis" method="post">
+						<div class="table-responsive">
+							<table class="table">
+								<tr>
+									<td>E-Mail*</td>
+									<td><input type="text" class="inputLeft" name="RegisMail"></td>
+
+									<td>Vorname*</td>
+									<td><input type="text" class="inputLeft" name="RegisVName"></td>
+
+									<td>Geburtsdatum*</td>
+									<td><input type="date" class="inputLeft" name="RegisGeb"></td>
+								</tr>
+								<tr>
+									<td>Passwort*</td>
+									<td><input type="text" class="inputLeft"
+										name="RegisPassword"></td>
+
+									<td>Nachname*</td>
+									<td><input type="text" class="inputLeft" name="RegisNName"></td>
+
+									<td>Kennzeichen</td>
+									<td><input type="text" class="inputLeft" name="RegisKenn"></td>
+								</tr>
+							</table>
+						</div>
+						<input type="submit" class="btn btn-small" value="Registrieren" />
+
+					</form>
+				</div>
+
+			</div>
+		</div>
+
+
+
+		<div class="container call-to-action">
+			<h1>
+				GANZ <br class="visible-phone"> LEICHT <br
+					class="visible-phone"> MITFAHREN
+			</h1>
+			<h2>Nie wieder im Regen stehen</h2>
+			<a href="#top" class="scroll-top"> Nach oben! <i
+				class="arrow arrow-up">&nbsp;</i>
+			</a>
+		</div>
+
+
+		<div class="footer" name="">
+
+			<div class="container">
+				<div class="copyright">
+
+					<p>WEBTEC 2013/2014: Agnes Klein, Katharina Imhof</p>
+
+					<p></p>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

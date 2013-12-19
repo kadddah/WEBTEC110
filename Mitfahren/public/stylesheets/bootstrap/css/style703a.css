@@ -474,7 +474,7 @@ i.share-facebook{
 
 
 
-/* flywheel form */
+/* webtechnik form */
 label.error{
 	margin-top:10px;
 	display:block;
@@ -496,7 +496,7 @@ textarea, input { outline: none; }
 .sign-up-form .watermark{
 	left:10px;
 }
-.flywheel-form input[type="email"], .flywheel-form input[type="text"], #commentform textarea{
+.webtechnik-form input[type="email"], .webtechnik-form input[type="text"], #commentform textarea{
 	background:#fff;
 	border:none;
 	-webkit-border-top-left-radius: 3px;
@@ -514,7 +514,7 @@ textarea, input { outline: none; }
 	margin:0px;
 	font-family:Helvetica, Arial, sans-serif;
 }
-.flywheel-form-white input[type="text"]{
+.webtechnik-form-white input[type="text"]{
 	background:#fafafa;
 	border:1px solid #d4d4d4;
 	-webkit-border-radius: 3px;
@@ -556,13 +556,13 @@ textarea, input { outline: none; }
 	font-weight:700;
 	color:#fff;
 }
-.flywheel-form.sign-up-form-fixed input[type="submit"]:hover{
+.webtechnik-form.sign-up-form-fixed input[type="submit"]:hover{
 	background:#C50103;;
 }
 .sign-up-form-fixed .watermark_container .watermark {
 	top:-11px!important;
 }
-.flywheel-form.sign-up-form input[type="submit"]{
+.webtechnik-form.sign-up-form input[type="submit"]{
 	background:url(../../../images/icon-arrow-right.png) no-repeat 154px 22px #C50103;
 	border:none;
 	-webkit-border-top-right-radius: 3px;
@@ -582,7 +582,7 @@ textarea, input { outline: none; }
 	color:#fff;
 	padding-right:20px;
 }
-.flywheel-form input[type="submit"]:hover{
+.webtechnik-form input[type="submit"]:hover{
 	background:url(../../../images/icon-arrow-right.png) no-repeat 154px 22px #C50103;
 	-webkit-transition: background-color 200ms linear;
 	-moz-transition: background-color 200ms linear;
@@ -594,7 +594,7 @@ textarea, input { outline: none; }
 .sign-up-form-fixed input[type="submit"]:hover{
 	background:#111;
 }
-.flywheel-form#commentform input[type="email"], .flywheel-form#commentform input[type="text"],  #commentform textarea{
+.webtechnik-form#commentform input[type="email"], .webtechnik-form#commentform input[type="text"],  #commentform textarea{
 	background:#eee;
 	margin-bottom:10px;
 	-webkit-border-radius: 5px;
@@ -686,7 +686,7 @@ h4.icon-line span{
 	 margin-top:20px;
 	 margin:0px auto;
 }
-.full-width-features h1, .flywheel-modal h3, .full-width-blog h1{
+.full-width-features h1, .webtechnik-modal h3, .full-width-blog h1{
 	font-family:"Source Sans Pro", sans-serif;
 	font-weight:200;
 	color:#C50103;
@@ -775,7 +775,7 @@ h4.icon-line span{
 
 /* modals */
 
-.flywheel-modal{
+.webtechnik-modal{
 	background:#fff;
 	padding:20px;
 	width:600px;
@@ -785,14 +785,14 @@ h4.icon-line span{
 	border-radius: 5px;
 	display:none;
 }
-.flywheel-modal p{
+.webtechnik-modal p{
 	line-height:24px;
 	text-align:center;
 }
-.flywheel-modal h3{
+.webtechnik-modal h3{
 	margin-bottom:30px;
 }
-.flywheel-modal .close-modal{
+.webtechnik-modal .close-modal{
 	position:absolute;
 	top:10px;
 	right:10px;
@@ -807,7 +807,7 @@ h4.icon-line span{
 	background:#C50103;
 	text-align:center;
 }
-.flywheel-modal .close-modal:hover{
+.webtechnik-modal .close-modal:hover{
 	background:#C50103;
 	-webkit-transition: background-color 200ms linear;
 	-moz-transition: background-color 200ms linear;
@@ -897,7 +897,7 @@ h4.icon-line span{
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
     transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
 }
-.contact-form input[type="submit"], .flywheel-form-white input[type="submit"]{
+.contact-form input[type="submit"], .webtechnik-form-white input[type="submit"]{
 	background:#C50103;
 	border:none;
 	-webkit-border-radius: 3px;
@@ -1362,27 +1362,27 @@ h4.icon-line span{
 .reasons-wrap .techy{
 	display:none;
 }
-.reasons-wrap .flywheel-blurb{
+.reasons-wrap .webtechnik-blurb{
 	text-align:center;
     font-family: "Source Sans Pro",sans-serif;
     font-weight: 200;
     margin-bottom:15px;
 }
-.reasons-wrap .flywheel-blurb p{
+.reasons-wrap .webtechnik-blurb p{
 	text-align:center;
 	font-size:35px;
 	line-height:41px;
 }
-.reasons-wrap .flywheel-blurb p em{
+.reasons-wrap .webtechnik-blurb p em{
 	font-style:italic;
 	color: #C50103;
 }
-.reasons-wrap .flywheel-blurb h2{
+.reasons-wrap .webtechnik-blurb h2{
 	margin-top:-150px;
 	margin-bottom:0px;
 }
 
-.reasons-wrap .flywheel-blurb h3{
+.reasons-wrap .webtechnik-blurb h3{
 	font-family: "Source Sans Pro", Helvetica, Arial;
 	font-size:50px;
 	color:#fff;
@@ -1587,7 +1587,7 @@ h4.icon-line span{
 		width:100%;
 		padding:10px 0px;
 	}
-	.flywheel-modal{
+	.webtechnik-modal{
 		position:fixed;
 		width:auto!important;
 		top:0px;
@@ -1596,18 +1596,18 @@ h4.icon-line span{
 		bottom:0px;
 		padding-top:60px;
 	}
-	.flywheel-modal p{
+	.webtechnik-modal p{
 		text-align:center!important;
 		
 	}
-	.flywheel-modal .share-links a{
+	.webtechnik-modal .share-links a{
 		width:100%;
 		margin-bottom:20px;
 	}
-	.flywheel-modal .share-links a i{
+	.webtechnik-modal .share-links a i{
 		display:none;
 	}
-	.flywheel-modal .close-modal{
+	.webtechnik-modal .close-modal{
 		padding:15px 15px;
 	}
 	.agency-wrap .agency-credit{
@@ -1675,7 +1675,7 @@ h4.icon-line span{
 		margin-left:20px;
 		margin-right:20px;
 	}
-	#commentform.flywheel-form input[type="email"], #commentform.flywheel-form input[type="text"], #commentform textarea {
+	#commentform.webtechnik-form input[type="email"], #commentform.webtechnik-form input[type="text"], #commentform textarea {
 		padding:10px 0px;
 		width:100%
 	}
@@ -1765,7 +1765,7 @@ h4.icon-line span{
 		display:none;
 		
 	}
-	.reasons-wrap .flywheel-blurb h3 span, .reasons-wrap .flywheel-blurb h3 {
+	.reasons-wrap .webtechnik-blurb h3 span, .reasons-wrap .webtechnik-blurb h3 {
 		background:none;
 		padding:0px;
 	}
@@ -1821,7 +1821,7 @@ h4.icon-line span{
 		font-size:13px;
 		display:none!important;
 	}
-	.signup-form-blog .flywheel-form.sign-up-form input[type="submit"] {
+	.signup-form-blog .webtechnik-form.sign-up-form input[type="submit"] {
 		height:55px!important;
 	}
  }
@@ -1891,13 +1891,13 @@ h4.icon-line span{
 .signup-form-blog form{
 	padding:20px;
 }
-.signup-form-blog .flywheel-form input[type="email"]{
+.signup-form-blog .webtechnik-form input[type="email"]{
 	padding:10px 10px;
 	font-size:13px;
 	background:#eee;
 	margin-bottom:20px;
 }
-.signup-form-blog .flywheel-form.sign-up-form input[type="submit"] {
+.signup-form-blog .webtechnik-form.sign-up-form input[type="submit"] {
 	height:41px;
 	background:#C50103;
 	background-image:none;

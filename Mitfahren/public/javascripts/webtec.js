@@ -21,7 +21,7 @@ $(document).ready(function() {
 	
 	
 	/* lock form on scroll */
-	$('.down-tab, .reasons-wrap .flywheel-blurb h3 span').waypoint(function(event, direction) {
+	$('.down-tab, .reasons-wrap .webtechnik-blurb h3 span').waypoint(function(event, direction) {
 	   if (direction === 'down') {
 	      $('.lock-header').animate({
 		    top: '0'

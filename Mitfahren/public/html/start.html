@@ -36,6 +36,9 @@
 <script src="../javascripts/webtec.js"></script>
 <script src="../javascripts/jquery.carouFredSel-6.0.4-packed.js"></script>
 
+<!-- prüft, ob success oder nicht -->
+<script src="../javascripts/success.js"></script>
+
 </head>
 <body name="top">
 	<div id="fb-root"></div>
@@ -145,19 +148,22 @@
 	</script>
 
 	<script type="text/javascript">
-	 $(document).ready(function(){ 
+		$(document).ready(function() {
 
-    	var user_id = 0;
+			var user_id = 0;
 
-    	// einmal user id überprüfen!!!???
-    	if (user_id == 0) {
-    		$('.hidden-logged-out').css({'visibility':'hidden'});
-    	} 
-    	else {
-    		$('.hidden-logged-in').css({'visibility':'hidden'});
-    	}
+			// einmal user id überprüfen!!!???
+			if (user_id == 0) {
+				$('.hidden-logged-out').css({
+					'visibility' : 'hidden'
+				});
+			} else {
+				$('.hidden-logged-in').css({
+					'visibility' : 'hidden'
+				});
+			}
 
-    });
+		});
 	</script>
 
 	<div class="lock-header hidden-phone">
@@ -175,7 +181,8 @@
 				<div class="linkNav_logged-in hidden-logged-in">
 					<!-- #login -->
 					&#9830; <a href="#top">Nach Oben!</a> &#9830; <a
-						href="#feature-set">Ausloggen</a> &#9830;
+						href="#feature-set">Inserat aufgeben</a> &#9830; <a
+						href="start.html">Ausloggen</a> &#9830;
 				</div>
 			</div>
 		</div>
@@ -186,14 +193,15 @@
 				<div class="row">
 					<div class="span12">
 						<div class="top-nav">
-							<a href="#top" class="logo-link"> <img
+							<a href="start.html" class="logo-link"> <img
 								src="../images/logo.png" alt="webtec">
 							</a>
 							<ul class="nav nav-home">
 								<!-- #login -->
-								
+
 								<li><a href="#feature-set" class="hidden-logged-out">Einloggen</a></li>
 								<li><a href="#regis" class="hidden-logged-out">Registrieren</a></li>
+								<li><a href="#feature-set" class="">Inserat</a></li>
 								<li><a href="start.html" class="hidden-logged-in">Ausloggen</a></li>
 
 							</ul>
@@ -214,14 +222,17 @@
 										<table class="table">
 											<tr>
 												<td class="white">Start (mit Ort)</td>
-												<td><input type="text" name="start" id="start" class="inputbox inputleft" /></td>
+												<td><input type="text" name="start" id="start"
+													class="inputbox inputleft" /></td>
 											</tr>
 											<tr>
 												<td class="white">Ziel (mit Ort)</td>
-												<td><input type="text" name="end" id="end" class="inputbox inputleft" /></td>
+												<td><input type="text" name="end" id="end"
+													class="inputbox inputleft" /></td>
 											</tr>
 										</table>
-										<button type="submit" class="btn btn-small">Strecke suchen</button>
+										<button type="submit" class="btn btn-small">Strecke
+											suchen</button>
 									</div>
 								</form>
 							</div>
@@ -244,14 +255,17 @@
 										<table class="table">
 											<tr>
 												<td class="white">Start (mit Ort)</td>
-												<td><input type="text" name="start" id="start" class="inputbox inputleft" /></td>
+												<td><input type="text" name="start" id="start"
+													class="inputbox inputleft" /></td>
 											</tr>
 											<tr>
 												<td class="white">Ziel (mit Ort)</td>
-												<td><input type="text" name="end" id="end" class="inputbox inputleft" /></td>
+												<td><input type="text" name="end" id="end"
+													class="inputbox inputleft" /></td>
 											</tr>
 										</table>
-										<button type="submit" class="btn btn-small">Strecke suchen</button>
+										<button type="submit" class="btn btn-small">Strecke
+											suchen</button>
 
 
 									</div>
@@ -285,89 +299,158 @@
 		</div>
 
 		<a href="#feature-set" class="down-tab hidden-phone"
-			name="feature-set"> Login / Registrieren <i
+			name="feature-set"> <!-- ??? hiern och einmal genauer / zwecks auswählen; auch bei list.html! -->
+			<label class="hidden-logged-out">Login / Registrieren</label> <label
+			class=" hidden-logged-in">Inserat aufgeben</label> <i
 			class="arrow arrow-down">&nbsp;</i>
 		</a>
 
 
 		<!-- ########################### SEITE 2 ########################### -->
+
 		<div class="full-width-features feature-1">
-			<div class="container" name="login">
-				<div class="row">
-					<div class="span12">
-						<h1>Login</h1>
-						<h2>Einloggen mit E-Mail und Passwort.</h2>
+
+			<div class="hidden-logged-out">
+				<div class="container" name="login">
+					<div class="row">
+						<div class="span12">
+							<h1>Login</h1>
+							<h2>Einloggen mit E-Mail und Passwort.</h2>
+						</div>
+					</div>
+
+					<div class="center_wob">
+						<form method="get" action="#top" id="sendLogin">
+
+							<div class="table-responsive">
+								<table class="table">
+									<tr>
+										<td>E-Mail*</td>
+										<td><input type="text" class="inputLeft" name="loginMail"></td>
+									</tr>
+									<tr>
+										<td>Passwort*</td>
+										<td><input type="text" class="inputLeft"
+											name="loginPassword"></td>
+									</tr>
+								</table>
+							</div>
+							<div class="facebook">
+								<fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
+							</div>
+							<input type="submit" class="btn btn-small" value="Einloggen" />
+						</form>
 					</div>
 				</div>
+			</div>
 
-				<div class="center_wob">
-					<form method="POST" target="_top" id="sendLogin">
+			<div class="hidden-logged-in hidden-inserat">
 
-						<div class="table-responsive">
-							<table class="table">
-								<tr>
-									<td>E-Mail*</td>
-									<td><input type="text" class="inputLeft" name="loginMail"></td>
-								</tr>
-								<tr>
-									<td>Passwort*</td>
-									<td><input type="text" class="inputLeft"
-										name="loginPassword"></td>
-								</tr>
-							</table>
+				<div class="container" name="">
+					<div class="row">
+						<div class="span12">
+							<h1>Inserat aufgeben</h1>
+							<h2>Hier werden Strecken angeboten</h2>
 						</div>
-						<div class="facebook">
-							<fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
-						</div>
-						<input type="submit" class="btn btn-small" value="Einloggen" />
-					</form>
+					</div>
+
+					<div class="center_wob">
+						<form method="get" onSubmit="return success()" name="Inserat">
+							<div class="table-responsive">
+
+								<table class="table">
+									<tr>
+										<td class="white">Start (mit Ort)*</td>
+										<td><input type="text" name="start_inserat"
+											id="start_inserat" class="inputbox inputleft" /></td>
+									</tr>
+									<tr>
+										<td class="white">Ziel (mit Ort)*</td>
+										<td><input type="text" name="end_inserat"
+											id="end_inserat" class="inputbox inputleft" /></td>
+									</tr>
+								</table>
+								<button type="submit" class="btn btn-small">Strecke
+									eintragen</button>
+
+
+							</div>
+						</form>
+					</div>
 				</div>
-
+			</div>
+			<div class="hidden-logged-in hidden-success">
+				<div class="container" name="">
+					<div class="row">
+						<div class="span12">
+							<h1>Erfolg</h1>
+							<h2>Strecke wurde erfolgreich eingetragen!</h2>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 
+
 		<!-- ########################### SEITE 3 ########################### -->
-		<div class="full-width-features feature-2">
+		<div class="full-width-features feature-1">
 			<div class="container" name="regis">
-				<div class="row">
-					<div class="span12">
-						<h1>Registrieren</h1>
-						<h2>Tragen Sie Ihre Daten zur Registration ein.</h2>
+				<div class="hidden-logged-out">
+					<div class="row">
+						<div class="span12">
+							<h1>Registrieren</h1>
+							<h2>Tragen Sie Ihre Daten zur Registration ein.</h2>
+						</div>
+					</div>
+
+					<div class="">
+						<form action="#top" id="sendRegis" method="get">
+							<div class="table-responsive">
+								<table class="table">
+									<tr>
+										<td>E-Mail*</td>
+										<td><input type="text" class="inputLeft" name="RegisMail"></td>
+
+										<td>Vorname*</td>
+										<td><input type="text" class="inputLeft"
+											name="RegisVName"></td>
+
+										<td>Geburtsdatum*</td>
+										<td><input type="date" class="inputLeft" name="RegisGeb"></td>
+									</tr>
+									<tr>
+										<td>Passwort*</td>
+										<td><input type="text" class="inputLeft"
+											name="RegisPassword"></td>
+
+										<td>Nachname*</td>
+										<td><input type="text" class="inputLeft"
+											name="RegisNName"></td>
+
+										<td>Kennzeichen</td>
+										<td><input type="text" class="inputLeft" name="RegisKenn"></td>
+									</tr>
+								</table>
+							</div>
+							<input type="submit" class="btn btn-small" value="Registrieren" />
+
+						</form>
 					</div>
 				</div>
+			</div>
 
-				<div class="">
-					<form action="logged_in.html" id="sendRegis" method="get">
-						<div class="table-responsive">
-							<table class="table">
-								<tr>
-									<td>E-Mail*</td>
-									<td><input type="text" class="inputLeft" name="RegisMail"></td>
+			<div class="hidden-logged-in">
 
-									<td>Vorname*</td>
-									<td><input type="text" class="inputLeft" name="RegisVName"></td>
-
-									<td>Geburtsdatum*</td>
-									<td><input type="date" class="inputLeft" name="RegisGeb"></td>
-								</tr>
-								<tr>
-									<td>Passwort*</td>
-									<td><input type="text" class="inputLeft"
-										name="RegisPassword"></td>
-
-									<td>Nachname*</td>
-									<td><input type="text" class="inputLeft" name="RegisNName"></td>
-
-									<td>Kennzeichen</td>
-									<td><input type="text" class="inputLeft" name="RegisKenn"></td>
-								</tr>
-							</table>
+				<div class="container" name="">
+					<div class="row">
+						<div class="span12">
+							<h1>asdfdasfsadf</h1>
+							<h2>My name is Batman</h2>
 						</div>
-						<input type="submit" class="btn btn-small" value="Registrieren" />
+					</div>
 
-					</form>
+
 				</div>
-
 			</div>
 		</div>
 

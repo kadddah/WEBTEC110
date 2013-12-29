@@ -41,17 +41,25 @@ table input {
 .list_routes {
 	width: 100%;
 	min-height: 50px;
-	max-height: 440px;
+	max-height: 420px;
 	background-color: #C50103;
 	overflow:scroll;
 }
 
 .hidden-logged-out {
 	z-index: 1;
-	height:1px;
+	min-height:1px;
 }
 
 .hidden-logged-in {
 	z-index: 2;
-	height:1px;
+	min-height:1px;
+}
+
+.hidden-success {
+	visibility: hidden;
+}
+
+textarea.message_area {
+	margin-left:20px;
 }

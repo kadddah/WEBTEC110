@@ -670,7 +670,7 @@ h4.icon-line span{
 }
 .full-width-features, .full-width-blog{
 	background:url(../../../images/site-bg.png);
-	padding:50px 0px;
+	padding:110px 0px;
 }
 .full-width-features.feature-1{
 	padding-bottom:190px;
@@ -680,7 +680,8 @@ h4.icon-line span{
 	padding:130px 0px 150px;
 }
 .full-width-features.feature-3{
-	padding:130px 0px 150px;
+	background:url(../../../images/site-bg.png);
+	padding:130px 0px 270px;
 }
 .full-width-features .container, .full-width-blog .container{
 	 margin-top:20px;

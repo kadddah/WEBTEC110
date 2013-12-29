@@ -37,6 +37,9 @@
 <script src="../javascripts/webtec.js"></script>
 <script src="../javascripts/jquery.carouFredSel-6.0.4-packed.js"></script>
 
+<!-- prüft, ob success oder nicht -->
+<script src="../javascripts/success.js"></script>
+
 
 </head>
 <body name="top">
@@ -75,7 +78,8 @@
 				<div class="linkNav_logged-in hidden-logged-in">
 					<!-- #login -->
 					&#9830; <a href="#top">Nach Oben!</a> &#9830; <a
-						href="#feature-set">Ausloggen</a> &#9830;
+						href="#feature-set">Inserat aufgeben</a> &#9830; <a
+						href="start.html">Ausloggen</a> &#9830;
 				</div>
 			</div>
 		</div>
@@ -86,7 +90,7 @@
 				<div class="row">
 					<div class="span12">
 						<div class="top-nav">
-							<a href="#top" class="logo-link"> <img
+							<a href="start.html" class="logo-link"> <img
 								src="../images/logo.png" alt="webtec">
 							</a>
 							<ul class="nav nav-home">
@@ -94,6 +98,7 @@
 
 								<li><a href="#feature-set" class="hidden-logged-out">Einloggen</a></li>
 								<li><a href="#regis" class="hidden-logged-out">Registrieren</a></li>
+								<li><a href="#feature-set" class="">Inserat</a></li>
 								<li><a href="start.html" class="hidden-logged-in">Ausloggen</a></li>
 
 							</ul>
@@ -105,7 +110,10 @@
 							<h2>Mitfahrgelegenheit</h2>
 
 							<div class="list_routes">
-								<p>Folgende Strecken sind verfügbar:</p>
+								<p>
+									Folgende Strecken sind verfügbar:
+									<button type="" class="btn btn-small" value="Details"></button>
+								</p>
 								<p>Folgende Strecken sind verfügbar:</p>
 								<p>Folgende Strecken sind verfügbar:</p>
 								<p>Folgende Strecken sind verfügbar:</p>
@@ -154,7 +162,7 @@
 							<div class="list_routes">
 								<p>Folgende Strecken sind verfügbar:</p>
 
-								<!-- alle einträge die passen anzeigen! -->
+								<!-- alle einträge die passen anzeigen phone????! -->
 
 							</div>
 						</div>
@@ -209,38 +217,48 @@
 				</div>
 			</div>
 
-			<div class="hidden-logged-in">
+			<div class="hidden-logged-in hidden-inserat">
 
 				<div class="container" name="">
 					<div class="row">
 						<div class="span12">
-							<h1>Chat</h1>
-							<h2>Strecke ausmachen, sich bemerkbar machen! asdf???</h2>
+							<h1>Inserat aufgeben</h1>
+							<h2>Hier werden Strecken angeboten</h2>
 						</div>
 					</div>
 
 					<div class="center_wob">
-						<form method="get" action="#top" id="sendMessage">
+						<form method="get" onSubmit="return success()" name="Inserat">
+							<div class="table-responsive">
 
-							<fieldset>
-								<!-- Textarea -->
-								<div class="control-group">
-									<div class="controls">
-										<input type="text">
-										<textarea id="textarea" name="textarea">default text</textarea>
-									</div>
-								</div>
+								<table class="table">
+									<tr>
+										<td class="white">Start (mit Ort)*</td>
+										<td><input type="text" name="start_inserat"
+											id="start_inserat" class="inputbox inputleft" /></td>
+									</tr>
+									<tr>
+										<td class="white">Ziel (mit Ort)*</td>
+										<td><input type="text" name="end_inserat"
+											id="end_inserat" class="inputbox inputleft" /></td>
+									</tr>
+								</table>
+								<button type="submit" class="btn btn-small">Strecke
+									eintragen</button>
 
-								<!-- Button -->
-								<div class="control-group">
-									<div class="controls">
-										<button id="message_btn" name="message_btn"
-											class="btn btn-small">Nachricht senden!</button>
-										<!-- ??? nachricht erfolgreich gesendet!!! -->
-									</div>
-							</fieldset>
 
+							</div>
 						</form>
+					</div>
+				</div>
+			</div>
+			<div class="hidden-logged-in hidden-success">
+				<div class="container" name="">
+					<div class="row">
+						<div class="span12">
+							<h1>Erfolg</h1>
+							<h2>Strecke wurde erfolgreich eingetragen!</h2>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -248,7 +266,7 @@
 
 
 		<!-- ########################### SEITE 3 ########################### -->
-		<div class="full-width-features feature-2">
+		<div class="full-width-features feature-1">
 			<div class="container" name="regis">
 				<div class="hidden-logged-out">
 					<div class="row">

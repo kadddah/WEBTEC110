@@ -13,5 +13,7 @@ public class Main extends Controller{
 	public static Result index(){
 		return redirect("/assets/html/start.html");
 	}
+	
+
 
 }

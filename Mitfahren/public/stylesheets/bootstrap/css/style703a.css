@@ -1927,4 +1927,10 @@ body .signup-form-blog .watermark_container{
 
 .linkNav {
 margin-top: 20px;
+z-index: 1;
+}
+
+.linkNav_logged-in {
+	margin-top: -20px;
+	z-index: 2;
 }
